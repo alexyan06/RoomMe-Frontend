@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Question Form</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="output.css">
+  
+</head>
+<body>
+  <div id="question-container">
+    <div id="question1">
+      <h2>Question 1</h2>
+      <p>How comfortable are you with smoking/vaping</p>
+      <input type="range" min="1" max="10" value="5" id="answer1" oninput="updateSliderValue()">
+      <label id="sliderValue1">5</label>
+      <button onclick="submitAnswer(1)">Submit</button>
+    </div>
+    <div id="question2" style="display: none;">
+      <h2>Question 2</h2>
+      <p>How comfortable are you with drinking from 1-10</p>
+      <input type="range" min="1" max="10" value="5" id="answer2" oninput="updateSliderValue()">
+      <label id="sliderValue2">5</label>
+      <button onclick="submitAnswer(2)">Submit</button>
+    </div>
+    <div id="question3" style="display: none;">
+        <h2>Question 3</h2>
+        <p>How social are you from 1-10</p>
+        <input type="range" min="1" max="10" value="5" id="answer3" oninput="updateSliderValue()">
+        <label id="sliderValue3">5</label>
+        <button onclick="submitAnswer(3)">Submit</button>
+    </div>
+      <div id="question4" style="display: none;">
+        <h2>Question 4</h2>
+        <p>How much alone time do you desire from 1-10</p>
+        <input type="range" min="1" max="10" value="5" id="answer4" oninput="updateSliderValue()">
+        <label id="sliderValue4">5</label>
+        <button onclick="submitAnswer(4)">Submit</button>
+      </div>
+      <div id="question5" style="display: none;">
+        <h2>Question 5</h2>
+        <p>How warm do you want your room to be from 1-10</p>
+        <input type="range" min="1" max="10" value="5" id="answer5" oninput="updateSliderValue()">
+        <label id="sliderValue5">5</label>
+        <button onclick="submitAnswer(5)">Submit</button>
+      </div>
+      <div id="question6" style="display: none;">
+        <h2>Question 6</h2>
+        <p>How tolerant are you of noise from 1-10?</p>
+        <input type="range" min="1" max="10" value="5" id="answer6" oninput="updateSliderValue()">
+        <label id="sliderValue6">5</label>
+        <button onclick="submitAnswer(6)">Submit</button>
+      </div>
+      <div id="question7" style="display: none;">
+        <h2>Question 7</h2>
+        <p>What is the largest country in the world?</p>
+        <input type="range" min="1" max="10" value="5" id="answer7" oninput="updateSliderValue()">
+        <label id="sliderValue7">5</label>
+        <button onclick="submitAnswer(7)">Submit</button>
+      </div>
+      <div id="question8" style="display: none;">
+        <h2>Question 8</h2>
+        <p>What is the largest country in the world?</p>
+        <input type="range" min="1" max="10" value="5" id="answer8" oninput="updateSliderValue()">
+        <label id="sliderValue8">5</label>
+        <button onclick="submitAnswer(8)">Submit</button>
+      </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
