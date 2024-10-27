@@ -1,70 +1,226 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 <head>
   <title>Multi-Question Form</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="output.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
   
 </head>
 <body>
-  <div id="question-container">
-    <div id="question1">
-      <h2>Question 1</h2>
-      <p>How comfortable are you with smoking/vaping</p>
-      <input type="range" min="1" max="10" value="5" id="answer1" oninput="updateSliderValue()">
-      <label id="sliderValue1">5</label>
-      <button onclick="submitAnswer(1)">Submit</button>
+  <div id="question-container" class = "screen"  style="height: 100vh">
+    <div id="question1" class="screen text-center" style ="margin-top: 800px;">
+      <h2 class = "text-7xl font-extrabold dark:text-white pb-12">Question 1/8</h2>
+      <p class ="text-5xl font-bold dark:text-white pb-16">How comfortable are you with smoking/vaping?</p>
+      <div style="margin: 0 10%">
+        <input type="range" min="1" max="10" value="2" class="range" step="1" />
+      </div>
+      <div class="flex justify-between text-xs" style="margin: 0 11%">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+      </div>
+      <div class="flex justify-between" style="margin-left: 101px; margin-right: 97px">
+        <div style="font-size: 24px">1</div>
+        <div style="font-size: 24px">10</div>
+      </div> 
+      <div class="my-28"style="width: 100%; align-items: center; display: flex">
+        <button class="btn btn-lg btn-outline btn-success" onclick="submitAnswer(1)" style="margin: auto">Submit</button>
+      </div>
     </div>
-    <div id="question2" style="display: none;">
-      <h2>Question 2</h2>
-      <p>How comfortable are you with drinking from 1-10</p>
-      <input type="range" min="1" max="10" value="5" id="answer2" oninput="updateSliderValue()">
-      <label id="sliderValue2">5</label>
-      <button onclick="submitAnswer(2)">Submit</button>
+
+    <div id="question2" class="screen text-center" style ="display: none; margin-top: 800px;">
+      <h2 class = "text-7xl font-extrabold dark:text-white pb-12">Question 2/8</h2>
+      <p class ="text-5xl font-bold dark:text-white pb-16">How comfortable are you with smoking/vaping?</p>
+      <div style="margin: 0 10%">
+        <input type="range" min="1" max="10" value="2" class="range" step="1" />
+      </div>
+      <div class="flex justify-between text-xs" style="margin: 0 11%">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+      </div>
+      <div class="flex justify-between" style="margin-left: 101px; margin-right: 97px">
+        <div style="font-size: 24px">1</div>
+        <div style="font-size: 24px">10</div>
+      </div> 
+      <div class="my-28"style="width: 100%; align-items: center; display: flex">
+        <button class="btn btn-lg btn-outline btn-success" onclick="submitAnswer(2)" style="margin: auto">Submit</button>
+      </div>
     </div>
-    <div id="question3" style="display: none;">
-        <h2>Question 3</h2>
-        <p>How social are you from 1-10</p>
-        <input type="range" min="1" max="10" value="5" id="answer3" oninput="updateSliderValue()">
-        <label id="sliderValue3">5</label>
-        <button onclick="submitAnswer(3)">Submit</button>
+
+    <div id="question3" class="screen text-center" style ="display: none; margin-top: 800px;">
+      <h2 class = "text-7xl font-extrabold dark:text-white pb-12">Question 3/8</h2>
+      <p class ="text-5xl font-bold dark:text-white pb-16">How comfortable are you with smoking/vaping?</p>
+      <div style="margin: 0 10%">
+        <input type="range" min="1" max="10" value="2" class="range" step="1" />
+      </div>
+      <div class="flex justify-between text-xs" style="margin: 0 11%">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+      </div>
+      <div class="flex justify-between" style="margin-left: 101px; margin-right: 97px">
+        <div style="font-size: 24px">1</div>
+        <div style="font-size: 24px">10</div>
+      </div> 
+      <div class="my-28"style="width: 100%; align-items: center; display: flex">
+        <button class="btn btn-lg btn-outline btn-success" onclick="submitAnswer(3)" style="margin: auto">Submit</button>
+      </div>
     </div>
-      <div id="question4" style="display: none;">
-        <h2>Question 4</h2>
-        <p>How much alone time do you desire from 1-10</p>
-        <input type="range" min="1" max="10" value="5" id="answer4" oninput="updateSliderValue()">
-        <label id="sliderValue4">5</label>
-        <button onclick="submitAnswer(4)">Submit</button>
+
+    <div id="question4" class="screen text-center" style ="display: none; margin-top: 800px;">
+      <h2 class = "text-7xl font-extrabold dark:text-white pb-12">Question 4/8</h2>
+      <p class ="text-5xl font-bold dark:text-white pb-16">How comfortable are you with smoking/vaping?</p>
+      <div style="margin: 0 10%">
+        <input type="range" min="1" max="10" value="2" class="range" step="1" />
       </div>
-      <div id="question5" style="display: none;">
-        <h2>Question 5</h2>
-        <p>How warm do you want your room to be from 1-10</p>
-        <input type="range" min="1" max="10" value="5" id="answer5" oninput="updateSliderValue()">
-        <label id="sliderValue5">5</label>
-        <button onclick="submitAnswer(5)">Submit</button>
+      <div class="flex justify-between text-xs" style="margin: 0 11%">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
       </div>
-      <div id="question6" style="display: none;">
-        <h2>Question 6</h2>
-        <p>How tolerant are you of noise from 1-10?</p>
-        <input type="range" min="1" max="10" value="5" id="answer6" oninput="updateSliderValue()">
-        <label id="sliderValue6">5</label>
-        <button onclick="submitAnswer(6)">Submit</button>
+      <div class="flex justify-between" style="margin-left: 101px; margin-right: 97px">
+        <div style="font-size: 24px">1</div>
+        <div style="font-size: 24px">10</div>
+      </div> 
+      <div class="my-28"style="width: 100%; align-items: center; display: flex">
+        <button class="btn btn-lg btn-outline btn-success" onclick="submitAnswer(4)" style="margin: auto">Submit</button>
       </div>
-      <div id="question7" style="display: none;">
-        <h2>Question 7</h2>
-        <p>What is the largest country in the world?</p>
-        <input type="range" min="1" max="10" value="5" id="answer7" oninput="updateSliderValue()">
-        <label id="sliderValue7">5</label>
-        <button onclick="submitAnswer(7)">Submit</button>
+    </div>
+    <div id="question5" class="screen text-center" style ="display: none; margin-top: 800px;">
+      <h2 class = "text-7xl font-extrabold dark:text-white pb-12">Question 5/8</h2>
+      <p class ="text-5xl font-bold dark:text-white pb-16">How comfortable are you with smoking/vaping?</p>
+      <div style="margin: 0 10%">
+        <input type="range" min="1" max="10" value="2" class="range" step="1" />
       </div>
-      <div id="question8" style="display: none;">
-        <h2>Question 8</h2>
-        <p>What is the largest country in the world?</p>
-        <input type="range" min="1" max="10" value="5" id="answer8" oninput="updateSliderValue()">
-        <label id="sliderValue8">5</label>
-        <button onclick="submitAnswer(8)">Submit</button>
+      <div class="flex justify-between text-xs" style="margin: 0 11%">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
       </div>
+      <div class="flex justify-between" style="margin-left: 101px; margin-right: 97px">
+        <div style="font-size: 24px">1</div>
+        <div style="font-size: 24px">10</div>
+      </div> 
+      <div class="my-28"style="width: 100%; align-items: center; display: flex">
+        <button class="btn btn-lg btn-outline btn-success" onclick="submitAnswer(5)" style="margin: auto">Submit</button>
+      </div>
+    </div>
+    <div id="question6" class="screen text-center" style ="display: none; margin-top: 800px;">
+      <h2 class = "text-7xl font-extrabold dark:text-white pb-12">Question 6/8</h2>
+      <p class ="text-5xl font-bold dark:text-white pb-16">How comfortable are you with smoking/vaping?</p>
+      <div style="margin: 0 10%">
+        <input type="range" min="1" max="10" value="2" class="range" step="1" />
+      </div>
+      <div class="flex justify-between text-xs" style="margin: 0 11%">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+      </div>
+      <div class="flex justify-between" style="margin-left: 101px; margin-right: 97px">
+        <div style="font-size: 24px">1</div>
+        <div style="font-size: 24px">10</div>
+      </div> 
+      <div class="my-28"style="width: 100%; align-items: center; display: flex">
+        <button class="btn btn-lg btn-outline btn-success" onclick="submitAnswer(6)" style="margin: auto">Submit</button>
+      </div>
+    </div>
+    <div id="question7" class="screen text-center" style ="display: none; margin-top: 800px;">
+      <h2 class = "text-7xl font-extrabold dark:text-white pb-12">Question 7/8</h2>
+      <p class ="text-5xl font-bold dark:text-white pb-16">How comfortable are you with smoking/vaping?</p>
+      <div style="margin: 0 10%">
+        <input type="range" min="1" max="10" value="2" class="range" step="1" />
+      </div>
+      <div class="flex justify-between text-xs" style="margin: 0 11%">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+      </div>
+      <div class="flex justify-between" style="margin-left: 101px; margin-right: 97px">
+        <div style="font-size: 24px">1</div>
+        <div style="font-size: 24px">10</div>
+      </div> 
+      <div class="my-28"style="width: 100%; align-items: center; display: flex">
+        <button class="btn btn-lg btn-outline btn-success" onclick="submitAnswer(7)" style="margin: auto">Submit</button>
+      </div>
+    </div>
+
+    <div id="question8" class="screen text-center" style ="display: none; margin-top: 800px;">
+      <h2 class = "text-7xl font-extrabold dark:text-white pb-12">Question 8/8</h2>
+      <p class ="text-5xl font-bold dark:text-white pb-16">How comfortable are you with smoking/vaping?</p>
+      <div style="margin: 0 10%">
+        <input type="range" min="1" max="10" value="2" class="range" step="1" />
+      </div>
+      <div class="flex justify-between text-xs" style="margin: 0 11%">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+      </div>
+      <div class="flex justify-between" style="margin-left: 101px; margin-right: 97px">
+        <div style="font-size: 24px">1</div>
+        <div style="font-size: 24px">10</div>
+      </div> 
+      <div class="my-28"style="width: 100%; align-items: center; display: flex">
+        <button class="btn btn-lg btn-outline btn-success" onclick="showDashboard()" style="margin: auto">Finish!</button>
+      </div>
+    </div>
+
   </div>
   <script src="app.js"></script>
 </body>
